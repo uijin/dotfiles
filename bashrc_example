@@ -1,0 +1,15 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# Start SSH agent and import keys
+. $HOME/.ssh/start_agent.sh
+
+# Source command aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+

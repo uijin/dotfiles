@@ -1,3 +1,3 @@
 alias sshconf='cat ~/.ssh/config.d/delta | less'
-alias dc='docker-compose'
+alias dkc='docker-compose'
 alias ll='ls -l'
