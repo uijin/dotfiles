@@ -1,0 +1,10 @@
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    last = log -1 HEAD
+    hist = log --pretty=format:'%C(auto)%h %ad | %s%d [%an]' --graph --date=short --all
+    serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+[diff]
+    tool = vimdiff

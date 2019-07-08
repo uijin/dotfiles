@@ -1,0 +1,173 @@
+IdentityFile ~/.ssh/portable_rsa
+ForwardAgent yes
+#User wayne
+
+HOST bs
+    #HostName 10.120.136.214
+    HostName 10.136.153.255
+    Port 9990
+    User wayne
+    DynamicForward localhost:1080
+HOST tp-ci
+    HostName 10.136.154.1
+    User wayne
+    LocalForward 5432 localhost:5432
+    #DynamicForward localhost:1080
+HOST tp-ci-2222
+    HostName 10.136.154.1
+    #HostName 10.120.137.173
+    Port 2222
+    User wayne
+HOST tp-demo
+    HostName 10.136.154.2
+    Port 2222
+    #HostName 10.120.138.8
+    User wayne
+HOST bj-stable-root
+    HostName 172.22.35.188
+    User root
+    DynamicForward localhost:1080
+HOST bj-stable
+    HostName 172.22.35.188
+    User zhanqiang
+HOST bj-mainline
+    HostName 172.22.34.220
+    User ls
+HOST bj-mainline-root
+    HostName 172.22.34.220
+    User root
+HOST tn-jingjong
+    HostName 172.16.240.11
+    User wayne
+    #ProxyCommand ssh -q -W %h:%p bs
+HOST tn-gpu
+    HostName 10.228.96.110
+    User wayne
+    #ProxyCommand ssh -q -W %h:%p bs
+    #ProxyCommand /d/opt/nc -s 10.120.136.214 -p 1080 %h %p
+    #ProxyCommand nc -X 5 -x 10.120.136.214:1080 %h %p
+HOST tn-gpu-2222
+    HostName 10.228.96.110
+    Port 2222
+    User wayne
+    #ProxyCommand ssh -q -W %h:%p bs
+    #ProxyCommand /d/opt/nc -s 10.120.136.214 -p 1080 %h %p
+    #ProxyCommand nc -X 5 -x 10.120.136.214:1080 %h %p
+HOST tn-gpu-jingjong
+    HostName 172.16.240.108
+    User wayne
+    #ProxyCommand ssh -q -W %h:%p bs
+    #ProxyCommand /d/opt/nc -s 10.120.136.214 -p 1080 %h %p
+    #ProxyCommand nc -X 5 -x 10.120.136.214:1080 %h %p
+HOST tn-nb0811
+    #HostName 172.16.240.5
+    HostName 10.228.96.4
+    User wayne
+HOST tn-nb0735
+    #HostName 172.16.240.6
+    HostName 10.228.96.5
+    User wayne
+HOST tp-gpu
+    HostName 10.136.8.11
+    Port 32222
+    #Port 22
+    User wayne
+    DynamicForward localhost:31080
+    #ProxyCommand ssh -q -W %h:%p bs
+    #ProxyCommand /d/opt/nc -s 10.120.136.214 -p 1080 %h %p
+    #ProxyCommand nc -X 5 -x 10.120.136.214:1080 %h %p
+HOST adc-1
+    HostName 10.136.153.253
+    User wayne
+    Port 10301
+HOST adc-2
+    HostName 10.136.153.254
+    User wayne
+    Port 10301
+    LocalForward 45901 172.16.8.72:35901
+    #LocalForward 35901 172.16.8.125:35901
+HOST diva-125
+    HostName 172.16.8.125
+    User drciv-dev
+HOST tp-db01
+    HostName 10.136.153.73
+    #Port 22
+    Port 32222
+    User wayne
+    RemoteForward 52698 127.0.0.1:52698
+HOST tp-whci
+    HostName 10.136.152.72
+    Port 32222
+    User wayne
+HOST tp-whmeu
+    HostName 10.136.152.73
+    Port 32222
+    User wayne
+HOST wh-test129
+    HostName 172.17.202.129
+    User root
+HOST dg-sqa01
+    #HostName 10.148.132.15
+    HostName 10.148.152.26
+    User wayne
+HOST dg-sqa02
+    HostName 10.148.132.16
+    User wayne
+HOST dg-sqa03
+    HostName 10.148.132.17
+    User wayne
+HOST dg-sqa04
+    HostName 10.148.132.18
+    User wayne
+HOST dg-sqa05
+    HostName 10.148.132.19
+    User wayne
+HOST dg-sqa06
+    HostName 10.148.132.20
+    User wayne
+HOST dg-sqa07
+    HostName 10.148.152.21
+    User wayne
+HOST dg-sqa08
+    HostName 10.148.152.22
+    User wayne
+HOST dg-sqa09
+    HostName 10.148.152.23
+    User wayne
+HOST dg-sqa10
+    HostName 10.148.152.24
+    User wayne
+HOST dg-lab01
+    HostName 10.148.132.21
+    User wayne
+HOST dg-lab02
+    HostName 10.148.132.22
+    User wayne
+HOST dg-lab03
+    HostName 10.148.132.23
+    User wayne
+HOST bj-sqa01
+    HostName 172.22.35.132
+    User deltauser
+#   OS: Centos6.5
+#   IP: 172.22.35.132
+#   User name:deltauser
+#   User Passwd:p@ssw0rd
+#   2G+20G+2CPU
+    
+HOST bj-jxp
+    HostName 172.22.34.41
+    User wayne
+    #LocalForward 1099 localhost:1099
+HOST tp-cdf01
+    HostName 10.136.155.57
+    Port 8022
+    User wayne
+HOST tp-cdf02
+    HostName 10.136.155.58
+    Port 8022
+    User wayne
+HOST tp-cdf03
+    HostName 10.136.155.59
+    Port 8022
+    User wayne
