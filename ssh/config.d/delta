@@ -54,7 +54,7 @@ HOST tn-gpu-2222
     #ProxyCommand /d/opt/nc -s 10.120.136.214 -p 1080 %h %p
     #ProxyCommand nc -X 5 -x 10.120.136.214:1080 %h %p
 HOST tn-gpu-jingjong
-    HostName 172.16.240.108
+    HostName 10.228.96.108
     User wayne
     #ProxyCommand ssh -q -W %h:%p bs
     #ProxyCommand /d/opt/nc -s 10.120.136.214 -p 1080 %h %p
