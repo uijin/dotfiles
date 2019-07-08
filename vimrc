@@ -11,7 +11,7 @@ call vundle#begin('$HOME/.vim/bundle/')
 "call vundle#begin('~/some/path/here')
 
 " Base16 theme
-Plugin 'chriskempson/base16-vim'
+"Plugin 'chriskempson/base16-vim'
 
 " NerdTree
 Plugin 'scrooloose/nerdtree'
