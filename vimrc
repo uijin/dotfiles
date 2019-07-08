@@ -3,8 +3,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
-call vundle#begin('$HOME/vimfiles/bundle/')
+set rtp+=$HOME/.vim/bundle/Vundle.vim/
+call vundle#begin('$HOME/.vim/bundle/')
 "set rtp+=~/.vim/bundle/Vundle.vim
 "call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -37,6 +37,9 @@ Plugin 'tpope/vim-fugitive'
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 "
 Plugin 'chase/vim-ansible-yaml'
+
+" https://github.com/flazz/vim-colorschemes
+Plugin 'flazz/vim-colorschemes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -90,7 +93,9 @@ let $LANG = 'en_US.UTF-8'
 " }}}
 
 " GUI {{{
-colorscheme base16-woodland
+set t_Co=256
+colorscheme gruvbox
+set bg=dark
 
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim

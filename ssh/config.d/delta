@@ -1,9 +1,7 @@
-IdentityFile ~/.ssh/portable_rsa
 ForwardAgent yes
 #User wayne
 
-HOST bs
-    #HostName 10.120.136.214
+HOST tp-bs
     HostName 10.136.153.255
     Port 9990
     User wayne
@@ -12,16 +10,8 @@ HOST tp-ci
     HostName 10.136.154.1
     User wayne
     LocalForward 5432 localhost:5432
-    #DynamicForward localhost:1080
-HOST tp-ci-2222
-    HostName 10.136.154.1
-    #HostName 10.120.137.173
-    Port 2222
-    User wayne
 HOST tp-demo
     HostName 10.136.154.2
-    Port 2222
-    #HostName 10.120.138.8
     User wayne
 HOST bj-stable-root
     HostName 172.22.35.188
@@ -37,18 +27,11 @@ HOST bj-mainline-root
     HostName 172.22.34.220
     User root
 HOST tn-jingjong
-    HostName 172.16.240.11
+    HostName 10.228.96.9
     User wayne
     #ProxyCommand ssh -q -W %h:%p bs
 HOST tn-gpu
     HostName 10.228.96.110
-    User wayne
-    #ProxyCommand ssh -q -W %h:%p bs
-    #ProxyCommand /d/opt/nc -s 10.120.136.214 -p 1080 %h %p
-    #ProxyCommand nc -X 5 -x 10.120.136.214:1080 %h %p
-HOST tn-gpu-2222
-    HostName 10.228.96.110
-    Port 2222
     User wayne
     #ProxyCommand ssh -q -W %h:%p bs
     #ProxyCommand /d/opt/nc -s 10.120.136.214 -p 1080 %h %p
@@ -60,38 +43,29 @@ HOST tn-gpu-jingjong
     #ProxyCommand /d/opt/nc -s 10.120.136.214 -p 1080 %h %p
     #ProxyCommand nc -X 5 -x 10.120.136.214:1080 %h %p
 HOST tn-nb0811
-    #HostName 172.16.240.5
     HostName 10.228.96.4
     User wayne
 HOST tn-nb0735
-    #HostName 172.16.240.6
     HostName 10.228.96.5
     User wayne
 HOST tp-gpu
     HostName 10.136.8.11
     Port 32222
-    #Port 22
     User wayne
     DynamicForward localhost:31080
     #ProxyCommand ssh -q -W %h:%p bs
     #ProxyCommand /d/opt/nc -s 10.120.136.214 -p 1080 %h %p
     #ProxyCommand nc -X 5 -x 10.120.136.214:1080 %h %p
-HOST adc-1
+HOST tp-adc-1
     HostName 10.136.153.253
     User wayne
     Port 10301
-HOST adc-2
+HOST tp-adc-2
     HostName 10.136.153.254
     User wayne
     Port 10301
-    LocalForward 45901 172.16.8.72:35901
-    #LocalForward 35901 172.16.8.125:35901
-HOST diva-125
-    HostName 172.16.8.125
-    User drciv-dev
 HOST tp-db01
     HostName 10.136.153.73
-    #Port 22
     Port 32222
     User wayne
     RemoteForward 52698 127.0.0.1:52698
@@ -154,7 +128,6 @@ HOST bj-sqa01
 #   User name:deltauser
 #   User Passwd:p@ssw0rd
 #   2G+20G+2CPU
-    
 HOST bj-jxp
     HostName 172.22.34.41
     User wayne
