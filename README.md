@@ -28,3 +28,12 @@ Set additional options
 ```
 git config --global --add difftool.prompt false
 ```
+
+### Use Git secret
+
+Copy shell script `git-secret` to `~/bin` or `/usr/local/bin` or some directory in your PATH.
+GPG key pairs are required, and key type `Ed25519` is recommend.
+
+- [git-secret](https://git-secret.io/) ([GitHub](https://github.com/sobolevn/git-secret#git-secret))
+- [Creating newer ECC keys for GnuPG](https://www.gniibe.org/memo/software/gpg/keygen-25519.html) (Ed25519)
+- [GPG 密钥的创建、管理和使用](https://blog.starryvoid.com/archives/348.html) (RSA)
