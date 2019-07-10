@@ -5,18 +5,18 @@ HOST tp-bs
     HostName 10.136.153.255
     Port 9990
     User wayne
-    DynamicForward localhost:1080
+    #DynamicForward localhost:1080
 HOST tp-ci
     HostName 10.136.154.1
     User wayne
-    LocalForward 5432 localhost:5432
+    #LocalForward 5432 localhost:5432
 HOST tp-demo
     HostName 10.136.154.2
     User wayne
 HOST bj-stable-root
     HostName 172.22.35.188
     User root
-    DynamicForward localhost:1080
+    #DynamicForward localhost:1080
 HOST bj-stable
     HostName 172.22.35.188
     User zhanqiang
@@ -52,7 +52,7 @@ HOST tp-gpu
     HostName 10.136.8.11
     Port 32222
     User wayne
-    DynamicForward localhost:31080
+    #DynamicForward localhost:31080
     #ProxyCommand ssh -q -W %h:%p bs
     #ProxyCommand /d/opt/nc -s 10.120.136.214 -p 1080 %h %p
     #ProxyCommand nc -X 5 -x 10.120.136.214:1080 %h %p
@@ -68,7 +68,7 @@ HOST tp-db01
     HostName 10.136.153.73
     Port 32222
     User wayne
-    RemoteForward 52698 127.0.0.1:52698
+    #RemoteForward 52698 127.0.0.1:52698
 HOST tp-whci
     HostName 10.136.152.72
     Port 32222
