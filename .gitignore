@@ -1,5 +1,5 @@
 .gitsecret/keys/random_seed
 !*.secret
 *~
-gitconfig.d/delta
 gitconfig.d/uijin
+gitconfig.d/delta.windows
