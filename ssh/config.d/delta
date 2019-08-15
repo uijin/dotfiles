@@ -48,6 +48,10 @@ HOST tn-nb0811
 HOST tn-nb0735
     HostName 10.228.96.5
     User wayne
+HOST tn-nb0786-vpn
+    HostName 10.136.153.73
+    Port 35601
+    User wayne
 HOST tp-gpu
     HostName 10.136.8.11
     Port 32222
