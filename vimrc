@@ -41,6 +41,10 @@ Plugin 'chase/vim-ansible-yaml'
 " https://github.com/flazz/vim-colorschemes
 Plugin 'flazz/vim-colorschemes'
 
+" Rust language plugin
+" https://github.com/rust-lang/rust.vim
+Plugin 'rust-lang/rust.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
