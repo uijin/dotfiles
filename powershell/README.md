@@ -32,3 +32,4 @@
 ## Reference
 
 1. [Enhance your PowerShell experience by automatically loading scripts](https://www.gsx.com/blog/bid/81096/enhance-your-powershell-experience-by-automatically-loading-scripts)
+2. [Windows 1803 之後 git for windows 無法透過 Start-SshAgent 啓用 ssh agent - 需要一直輸入 passphrase 的問題](https://blog.alantsai.net/posts/2018/11/faq-start-sshagent-error-1058-on-windows-1803-cannot-use-ssh-agent)
