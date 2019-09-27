@@ -16,6 +16,12 @@
 
 1. Install w/ SSH agent 
    `choco install --force openssh -params '"/SSHAgentFeature"'`
+2. Integrate with Git
+   1. Get ssh.exe location
+      `Get-Command ssh.exe`
+      Assume result is `C:\Program Files\OpenSSH-Win64\ssh.exe`
+   2. Set ssh command for Git
+      `git config --global core.sshCommand "'C:/Program Files/OpenSSH-Win64/ssh.exe'"`
 
 ## Profile
 
