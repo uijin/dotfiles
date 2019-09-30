@@ -41,7 +41,7 @@ Plugin 'chase/vim-ansible-yaml'
 " https://github.com/flazz/vim-colorschemes
 Plugin 'flazz/vim-colorschemes'
 
-" Rust language plugin
+" Rust language support
 " https://github.com/rust-lang/rust.vim
 Plugin 'rust-lang/rust.vim'
 
@@ -97,7 +97,12 @@ let $LANG = 'en_US.UTF-8'
 " }}}
 
 " GUI {{{
-set t_Co=256
+set termguicolors
+if has("termguicolors")
+    "Enable true color"
+    set termguicolors
+endif
+"set t_Co=256
 colorscheme gruvbox
 set bg=dark
 
@@ -107,7 +112,7 @@ source $VIMRUNTIME/menu.vim
 set hlsearch
 set number
 " 窗口大小
-"set lines=35 columns=140
+set lines=35 columns=140
 " 分割出來的窗口位於當前窗口下邊/右邊
 set splitbelow
 set splitright
@@ -121,8 +126,10 @@ set guioptions-=b
 set guioptions-=e
 set nolist
 " set listchars=tab:?\ ,eol:?,trail:‧,extends:>,precedes:<
-set guifont=Inconsolata:h12:cANSI
+set guifont=Ubuntu\ Mono\ 12
+"set guifont=Cascadia\ Code\ 12
 " }}}
+"
 
 " Format {{{
 set autoindent
