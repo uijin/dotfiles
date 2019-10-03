@@ -6,6 +6,7 @@ HOST tp-bs
     Port 9990
     User wayne
     #DynamicForward localhost:1080
+    RemoteForward 1080 localhost:8080
 HOST tp-ci
     HostName 10.136.154.1
     User wayne
@@ -52,6 +53,9 @@ HOST tn-nb0786-vpn
     HostName 10.136.153.73
     Port 35601
     User wayne
+HOST tn-nb0786
+    HostName 192.168.110.1
+    User wayne
 HOST tp-gpu
     HostName 10.136.8.11
     Port 32222
@@ -72,6 +76,7 @@ HOST tp-db01
     HostName 10.136.153.73
     Port 32222
     User wayne
+    LocalForward 9000 localhost:9000
     #RemoteForward 52698 127.0.0.1:52698
 HOST tp-whci
     HostName 10.136.152.72
@@ -106,6 +111,7 @@ HOST dg-sqa06
 HOST dg-sqa07
     HostName 10.148.152.21
     User wayne
+    #RemoteForward *:3268 deltaldap.deltaww.com:3268
 HOST dg-sqa08
     HostName 10.148.152.22
     User wayne
@@ -154,11 +160,19 @@ HOST tp-cdf03
 HOST dg-mesra-ci01
     Hostname 10.148.206.17
     User wayne
-    LocalForward 8080 localhost:8080 
     RemoteForward 9922 10.136.154.2:9922
+    RemoteForward *:1080 localhost:8080
 HOST dg-mesra-mas01
     Hostname 10.148.206.18
     User wayne
+    RemoteForward 9922 10.136.154.2:9922
+    # Sample Service Web API
+    LocalForward 8089 10.148.206.19:8089
+    # Minio
+    LocalForward *:9000 10.148.206.18:9000
+    # Minio
+    #LocalForward 9000 localhost:9000
 HOST dg-mesra-sta01
     Hostname 10.148.206.19
     User wayne
+    RemoteForward 9922 10.136.154.2:9922
